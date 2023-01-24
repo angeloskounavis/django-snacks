@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Home page</h1>
+
+    {% for snack in snacks %}
+    <h2>Name: {{ snack.title }}</h2>
+    <p>Description: {{ snack.description }}</p>
+        <img src="{{ snack.image_url }}" alt="Hi!" />
+    {% endfor %}
+
+{% endblock content %}
